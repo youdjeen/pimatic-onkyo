@@ -9,8 +9,8 @@ module.exports = (env) ->
     # @param [Object] config    device configuration
     constructor: (@config, @plugin) ->
       env.logger.debug "Initializing OnkyoVolume..."
-      @id = config.id
-      @name = config.name
+      @id = @config.id
+      @name = @config.name
 
       @plugin.on 'volume', (volume) =>
         @_setDimlevel volume

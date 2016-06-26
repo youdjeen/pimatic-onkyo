@@ -13,8 +13,8 @@ module.exports = (env) ->
     # template: "buttons"
 
     constructor: (@config, @plugin)->
-      @id = config.id
-      @name = config.name
+      @id = @config.id
+      @name = @config.name
 
       @_status = ""
 
@@ -32,7 +32,6 @@ module.exports = (env) ->
       switch code
         when '00' then return "VCR"
         when '01' then return "Cable"
-        when '02' then return "Game"
         when '23' then return "CD"
         when '24' then return "Tuner"
         else return ""

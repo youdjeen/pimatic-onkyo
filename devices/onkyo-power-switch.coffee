@@ -9,8 +9,8 @@ module.exports = (env) ->
     # @param [Object] config    device configuration
     constructor: (@config, @plugin) ->
       env.logger.debug "Initializing OnkyoPowerSwitch..."
-      @id = config.id
-      @name = config.name
+      @id = @config.id
+      @name = @config.name
 
       # attributes:
       #   volume:
